@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps Enterprise Portal</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
@@ -13,28 +15,50 @@
 
     <h1>🚀 DevOps Enterprise Portal</h1>
 
-    <h2>Welcome Suyog</h2>
+    <h2>Welcome, Suyog Tilekar</h2>
 
     <div class="card">
-        <h3>Application Information</h3>
 
-        <p><strong>Status:</strong> 🟢 Running</p>
-        <p><strong>Environment:</strong> {{ environment }}</p>
-        <p><strong>Version:</strong> {{ version }}</p>
-        <p><strong>Hostname:</strong> {{ hostname }}</p>
-        <p><strong>Build Time:</strong> {{ build_time }}</p>
+        <p><strong>Application Version :</strong> {{ version }}</p>
+
+        <p><strong>Environment :</strong> {{ environment }}</p>
+
+        <p><strong>Docker Image :</strong> {{ image }}</p>
+
+        <p><strong>Build Number :</strong> {{ build }}</p>
+
+        <p><strong>Git Commit :</strong> {{ git_commit }}</p>
+
+        <p><strong>Deployment Time :</strong> {{ deployment_time }}</p>
+
+        <p><strong>Application Uptime :</strong> {{ uptime }}</p>
+
+        <p><strong>Status :</strong>
+            <span class="healthy">🟢 Healthy</span>
+        </p>
+
     </div>
 
-    <div class="card">
-        <h3>Quote of the Day</h3>
+    <h3>Services</h3>
 
-        <blockquote>
-            "First make it work, then make it reliable, then make it scalable."
-        </blockquote>
+    <ul>
+        <li>✅ Docker</li>
+        <li>✅ Kubernetes</li>
+        <li>✅ Helm</li>
+        <li>✅ ArgoCD</li>
+        <li>✅ AWS EKS</li>
+        <li>✅ GitHub Actions</li>
+        <li>✅ JFrog Artifactory</li>
+    </ul>
+
+    <div class="quote">
+        "Automate Everything. Repeat Nothing."
     </div>
+
+    <hr>
 
     <footer>
-        Built by <strong>Suyog Tilekar</strong>
+        <p>Developed by <strong>Suyog Tilekar</strong></p>
     </footer>
 
 </div>
